@@ -1,0 +1,1065 @@
+{
+	"info": {
+		"_postman_id": "483e209d-c50d-4404-8101-96c45495a576",
+		"name": "Super Pari Case Study API documentation",
+		"description": "**Functional Requirements**:\n\n- CRUD operations for items (Case Study)\n    \n\n**Endpoint Spesifications**:\n\n- **GET** url/items: Return a list of all items. (Request name: **Get All Items**)\n    \n- **GET** url/items/{id}: Return a single item by ID. (Request name: **Get Item By ID**)\n    \n- **POST** url/items: Create a new item. The request body should contain the item details. (Request name: **Create Item**)\n    \n- **PUT** url/items/{id}: Update an existing item by ID. The request body should contain the updated item details. (Request name: **Update Item**)\n    \n- **DELETE** url/items/{id}: Delete an item by ID.EndFragment (Request name: **Delete Item**)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33132108"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Get All Items",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.getpostman.com/collections/{{collectionId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"{{collectionId}}"
+							],
+							"query": [
+								{
+									"key": "access_key",
+									"value": "{{accessKey}}",
+									"description": "Optional. A collection's read-only access key. Using this query parameter does not require an API key to call the endpoint.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets information about a collection. For a complete list of this endpoint's possible values, use the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json)."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/items?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:17:16 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1886"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Items\": [\n        {\n            \"item_id\": 1,\n            \"name\": \"Item 1\",\n            \"description\": \"Item 1 description\",\n            \"stock\": 20,\n            \"price\": 100000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 2,\n            \"name\": \"Item 2\",\n            \"description\": \"Item 2 description\",\n            \"stock\": 15,\n            \"price\": 75000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 3,\n            \"name\": \"Item 3\",\n            \"description\": \"Item 3 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 4,\n            \"name\": \"Item 4\",\n            \"description\": \"Item 4 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 5,\n            \"name\": \"Item 5\",\n            \"description\": \"Item 5 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 6,\n            \"name\": \"Item 6\",\n            \"description\": \"Item 6 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 7,\n            \"name\": \"Item 7\",\n            \"description\": \"Item 7 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 8,\n            \"name\": \"Item 8\",\n            \"description\": \"Item 8 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 9,\n            \"name\": \"Item 9\",\n            \"description\": \"Item 9 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        },\n        {\n            \"item_id\": 10,\n            \"name\": \"Item 10\",\n            \"description\": \"Item 10 description\",\n            \"stock\": 5,\n            \"price\": 300000,\n            \"created_at\": \"2025-02-06T05:17:07.149+07:00\",\n            \"updated_at\": \"2025-02-06T05:17:07.149+07:00\"\n        }\n    ],\n    \"Message\": \"Success get all items\",\n    \"Page\": 1,\n    \"Status\": 200,\n    \"TotalPage\": 2\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/items?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:25:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Items not found\",\n    \"Status\": 404\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Item By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.getpostman.com/collections",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"collections"
+							],
+							"query": [
+								{
+									"key": "workspace",
+									"value": "{{workspaceId}}",
+									"description": "Optional. A workspace ID.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets all of your [collections](https://www.getpostman.com/docs/collections). The response includes all of your subscribed collections."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:14:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Item\": {\n        \"item_id\": 1,\n        \"name\": \"Suatu Item 1 Updated\",\n        \"description\": \"Deskripsi Suatu Item 1 Updated\",\n        \"stock\": 50,\n        \"price\": 290000,\n        \"created_at\": \"2025-02-06T05:09:14.589+07:00\",\n        \"updated_at\": \"2025-02-06T05:09:34.586+07:00\"\n    },\n    \"Message\": \"Success get item\",\n    \"Status\": 200\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:15:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"code=404, message=record not found\",\n    \"Message\": \"Failed to get item\",\n    \"Status\": 404\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"collection\": {\n        \"info\": {\n            \"name\": \"{{collectionName}}\",\n            \"schema\": \"{{collectionSchemaUrl}}\"\n        },\n        \"item\": [\n            {\n                \"request\": {}\n            }\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/collections",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"collections"
+							],
+							"query": [
+								{
+									"key": "workspace",
+									"value": "{{workspaceId}}",
+									"description": "Optional. A workspace ID in which to create the collection.\n\nIf you do not include this query parameter, the system creates the collection in your \"My Workspace\" workspace.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Creates a collection using the [Postman Collection v2 schema format](https://schema.postman.com/json/collection/v2.1.0/docs/index.html). Include a `collection` object in the request body that contains the following required properties:\n\n*   `info` — An **object** that contains the following properties:\n    *   `name` — A **string** value that contains the collection's name.\n    *   `schema` — A **string** that contains a URL to the collection's schema. For example, the `https://schema.getpostman.com/collection/v1` URL.\n*   `item` — An **object** that contains the HTTP request and response information.\n    *   `request` — An **object** that contains the collection's request information. For a complete list of values, refer to the `definitions.request` entry in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json). If you pass an empty object for this value, the system defaults to an untitled GET request.\n\n**Note:**\n\n*   For a complete list of available property values for this endpoint, use the following references available in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json):\n    *   `info` object — Use the `definitions.info` entry.\n    *   `item` object — Use the `definitions.items` entry.\n*   For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json)."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "suatu item",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "deskripsi suatu item",
+											"type": "text"
+										},
+										{
+											"key": "Stock",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "Price",
+											"value": "450000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/items",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 21:38:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"New Item Created\",\n    \"Status\": 200\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "suatu item",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "deskripsi suatu item",
+											"type": "text"
+										},
+										{
+											"key": "Stock",
+											"value": "adasdasd",
+											"type": "text"
+										},
+										{
+											"key": "Price",
+											"value": "450000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/items",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 21:46:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"code=400, message=strconv.ParseInt: parsing \\\"adasdasd\\\": invalid syntax, internal=strconv.ParseInt: parsing \\\"adasdasd\\\": invalid syntax\",\n    \"Message\": \"Failed to create item\",\n    \"Status\": 400\n}"
+						},
+						{
+							"name": "Request Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "suatu item",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Stock",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "Price",
+											"value": "450000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/items",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 21:47:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Failed to create item due to: Description field is required to be filled\",\n    \"Status\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"collection\": {\n        \"info\": {\n            \"name\": \"{{collectionName}}\",\n            \"schema\": \"{{collectionSchemaUrl}}\"\n        },\n        \"item\": [\n            {\n                \"request\": {}\n            }\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/collections/{{collectionId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"{{collectionId}}"
+							]
+						},
+						"description": "Updates a collection using the [Postman Collection v2 schema format](https://schema.postman.com/json/collection/v2.1.0/docs/index.html). Include a `collection` object in the request body that contains the following required properties:\n\n- `info` — An **object** that contains the following properties:\n    - `name` — A **string** value that contains the collection's name.\n    - `schema` — A **string** that contains a URL to the collection's schema. For example, the `https://schema.getpostman.com/collection/v1` URL.\n- `item` — An **object** that contains the HTTP request and response information.\n    - `request` — An **object** that contains the collection's request information. For a complete list of values, refer to the `definitions.request` entry in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json). If you pass an empty object for this value, the system defaults to an untitled GET request.\n\n**Note:**\n\n- For a complete list of available property values for this endpoint, use the following references available in the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json):\n    - `info` object — Use the `definitions.info` entry.\n    - `item` object — Use the `definitions.items` entry.\n- For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).\n    \n\n### Important\n\nUse caution when using this endpoint. The system will replace the existing collection with the values passed in the request body."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "Suatu Item 1 Updated",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "Deskripsi Suatu Item 1 Updated",
+											"type": "text"
+										},
+										{
+											"key": "Stock",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "Price",
+											"value": "290000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:09:34 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Item Updated Successfully\",\n    \"Status\": 200\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "Suatu Item 1 Updated",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "Deskripsi Suatu Item 1 Updated",
+											"type": "text"
+										},
+										{
+											"key": "Stock",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "Price",
+											"value": "290000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:09:53 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"code=404, message=record not found\",\n    \"Message\": \"Failed to update item\",\n    \"Status\": 404\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "Suatu Item 1 Updated",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "Deskripsi Suatu Item 1 Updated",
+											"type": "text"
+										},
+										{
+											"key": "Stock",
+											"value": "asdasd",
+											"type": "text"
+										},
+										{
+											"key": "Price",
+											"value": "290000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:11:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"code=400, message=strconv.ParseInt: parsing \\\"asdasd\\\": invalid syntax, internal=strconv.ParseInt: parsing \\\"asdasd\\\": invalid syntax\",\n    \"Message\": \"Failed to update item\",\n    \"Status\": 400\n}"
+						},
+						{
+							"name": "Request Validation Error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "Deskripsi Suatu Item 1 Updated",
+											"type": "text"
+										},
+										{
+											"key": "Stock",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "Price",
+											"value": "290000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 22:12:25 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "93"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Failed to update item due to: Name field is required to be filled\",\n    \"Status\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.getpostman.com/collections/{{collectionId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"collections",
+								"{{collectionId}}"
+							]
+						},
+						"description": "Deletes a collection."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 21:48:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Item successfully deleted\",\n    \"Status\": 200\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/items/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 21:51:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"code=404, message=record not found\",\n    \"Message\": \"Failed to delete item\",\n    \"Status\": 404\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
