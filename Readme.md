@@ -21,7 +21,10 @@
     DB_USERNAME=root
     DB_PASSWORD=yourpassword
     ```
-- Run the project by simply sending the command “**go run main.go**” in the terminal
+- Run the project by simply sending the following command
+    ```
+    go run main.go
+    ```
 
 ## API Documentation URL
 - https://documenter.getpostman.com/view/33132108/2sAYX6phXX
