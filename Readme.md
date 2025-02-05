@@ -6,10 +6,25 @@
     - independent of database, you can swap out Oracle or SQL Server, for Mongo, BigTable, CouchDB, Postgres, or something else. Your business rules are not bound to the database.
 
 ## How to setup and run the project:
-- make sure your go version is more than 1.20 (required)
+- Clone this project (**If you are accessing from Github**)
+    ```
+    git clone https://github.com/fazaalexander/golang-crud-PARI.git
+    ```
+- make sure your go version is more or equal to 1.20 (required)
 - Create MySQL database with the name "superparidb"
-- Customize the database data in the .env file according to your local database configuration
-- Run the project by simply sending the command “go run main.go” in the terminal
+- Configure the database data in the .env file according to your local database configuration
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_NAME=superparidb
+    DB_USERNAME=root
+    DB_PASSWORD=yourpassword
+    ```
+- Run the project by simply sending the command “**go run main.go**” in the terminal
+
+## API Documentation URL
+- https://documenter.getpostman.com/view/33132108/2sAYX6phXX
 
 ## Functional Requirements:
 - CRUD operations for items (Case Study)
@@ -30,6 +45,3 @@
 
 ## Tech Stack (Additional):
 - Postman (API Documentation)
-
-## API Documentation URL
-- https://documenter.getpostman.com/view/33132108/2sAYX6phXX
