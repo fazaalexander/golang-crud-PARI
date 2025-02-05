@@ -30,3 +30,6 @@
 
 ## Tech Stack (Additional):
 - Postman (API Documentation)
+
+## API Documentation URL
+- https://documenter.getpostman.com/view/33132108/2sAYX6phXX
